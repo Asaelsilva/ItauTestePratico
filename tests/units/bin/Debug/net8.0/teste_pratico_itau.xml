@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>teste_pratico_itau</name>
+    </assembly>
+    <members>
+        <member name="M:Itau.Api.Login.LoginController.Post(Itau.Api.Login.Models.LoginDadosRequest)">
+            <summary>
+            Realiza a validação  de uma senha
+            </summary>
+            <param name="dados">Dados para validar senha</param>
+        </member>
+        <member name="T:Itau.Infrastructure.Common.BaseController.Return`1">
+            <summary>
+            Estrutura padrão de retorno para a API
+            </summary>
+            <typeparam name="T">Tipo do retorno</typeparam>
+        </member>
+        <member name="M:Itau.Infrastructure.Common.BaseController.CustomResponse``1(``0)">
+            <summary>
+            Faz o tratamento padrão de retorno
+            </summary>
+            <typeparam name="T">Tipo do retorno</typeparam>
+            <param name="data">Objeto que será retornado</param>
+            <returns>OkObjectResult ou NoContentResult</returns>
+        </member>
+        <member name="M:Itau.Infrastructure.Validations.FluentExtensions.FluentExtensions.Senha">
+            <remarks>
+            Pattern:<br/>
+            <code>^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*()\\-+\\=])(?!.*\\s).{9,}$</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match if at the beginning of the string.<br/>
+            ○ Zero-width positive lookahead.<br/>
+                ○ Match a character other than '\n' greedily any number of times.<br/>
+                ○ Match a character in the set [a-z].<br/>
+            ○ Zero-width positive lookahead.<br/>
+                ○ Match a character other than '\n' greedily any number of times.<br/>
+                ○ Match a character in the set [A-Z].<br/>
+            ○ Zero-width positive lookahead.<br/>
+                ○ Match a character other than '\n' greedily any number of times.<br/>
+                ○ Match a character in the set [0-9].<br/>
+            ○ Zero-width positive lookahead.<br/>
+                ○ Match a character other than '\n' greedily any number of times.<br/>
+                ○ Match a character in the set [!#-&amp;(-+-=@^].<br/>
+            ○ Zero-width negative lookahead.<br/>
+                ○ Match a character other than '\n' greedily any number of times.<br/>
+                ○ Match a whitespace character.<br/>
+            ○ Match a character other than '\n' greedily at least 9 times.<br/>
+            ○ Match if at the end of the string or if before an ending newline.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Senha_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the Senha method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Senha_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Senha_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.Senha_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_ascii_7A2F00200100004000000000">
+            <summary>Supports searching for characters in or not in "!#$%&amp;()*+-=@^".</summary>
+        </member>
+    </members>
+</doc>
